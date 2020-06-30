@@ -1,10 +1,21 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Header(props) {
-    return (
-        <header>
-            <h1>{props.postTitle}</h1>
-            <h2>{props.postSubreddit}</h2>
-        </header>
-    )
+export default function Header({ postTitle, postSubreddit }) {
+  return (
+    <header>
+      <h1>{postTitle}</h1>
+      <h2>{postSubreddit}</h2>
+    </header>
+  );
 }
+
+Header.propTypes = {
+  postTitle: PropTypes.string,
+  postSubreddit: PropTypes.string,
+};
+
+Header.defaultProps = {
+  postTitle: '',
+  postSubreddit: '',
+};

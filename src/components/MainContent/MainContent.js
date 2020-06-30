@@ -1,7 +1,10 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function MainContent(props) {
-    return (
-        <img className="mainImage" src={props.postUrl} alt="Post from Reddit"></img>
-    )
-}
+const MainContent = ({ postUrl }) => (
+  <img className="mainImage" src={postUrl} alt="Post from Reddit" />
+);
+
+MainContent.propTypes = {
+  postUrl: PropTypes.string.isRequired,
+};
